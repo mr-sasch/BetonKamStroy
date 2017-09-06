@@ -1,0 +1,401 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet"/>
+    <link rel="stylesheet" href="normalize.css"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css"/>
+  </head>
+  <body>
+    <!-- Шапка-->
+    <header>
+      <div class="header"><img class="header__logo" src="images/header__logo.png"/>
+        <ul class="header-menu">
+          <li class="header-menu__item"><a class="active" href="#about-comp">О компании</a></li>
+          <li class="header-menu__item header-menu__item-dot"></li>
+          <li class="header-menu__item"><a href="#products">Продукция</a></li>
+          <li class="header-menu__item header-menu__item-dot"></li>
+          <li class="header-menu__item"><a href="#delivery">Доставка</a></li>
+          <li class="header-menu__item header-menu__item-dot"></li>
+          <li class="header-menu__item"><a href="#payment">Оплата</a></li>
+          <li class="header-menu__item header-menu__item-dot"></li>
+          <li class="header-menu__item"><a href="#contacts">Контакты						</a></li>
+        </ul>
+        <div class="header__phones">
+          <div class="header__phones-phone">+37533<span class="header__phones-phone_yellow">318-96-32</span></div><a class="header__phones-btn" href="#header-btn">Заказать звонок</a>
+        </div>
+        <!-- Мобильное меню - кнопка -->
+        <input type="checkbox" name="mobile-menu" id="mobile-menu_stroke-cross" style="display:none;"/>
+        <div class="mobile-menu">
+          <label class="mobile-menu__strokes" for="mobile-menu_stroke-cross">
+            <div class="mobile-menu__stroke mobile-menu__stroke-cross1"></div>
+            <div class="mobile-menu__stroke mobile-menu__stroke-cross2"></div>
+            <div class="mobile-menu__stroke mobile-menu__stroke-cross3"></div>
+          </label>
+        </div>
+        <!-- Мобильное меню - Меню -->
+        <div class="mobile-menu__menu">
+          <ul class="mobile-menu__item">
+            <li> <a class="mobile-menu__item-a" href="#">ПОТОЛКИ</a></li>
+            <li> <a class="mobile-menu__item-a" href="#">ПРОДУКЦИЯ</a></li>
+            <li> <a class="mobile-menu__item-a" href="#">ДОСТАВКА</a></li>
+            <li> <a class="mobile-menu__item-a" href="#">ОПЛАТА</a></li>
+            <li> <a class="mobile-menu__item-a" href="#">КОНТАКТЫ</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <!-- /Шапка-->
+    <!-- Слайдер-->
+    <div class="cell">
+      <div class="slider"><img class="slider__img" src="images/slider-bg.png"/>
+        <div class="slider-window">
+          <div class="slider-text">
+            <div class="slider-text__item1"><span class="slider-text__item1-span">Товарный бетон и раствор						</span></div>
+            <div class="slider-text__item2"><span class="slider-text__item2-span">Оптом и в розницу</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Слайдер-->
+    <!-- Рассчитать стоимость бетона-->
+    <div class="cell">
+      <div class="calc-price-bg">
+        <div class="calc-price">
+          <div class="calc-price__title">Рассчитать стоимость бетона</div>
+          <form class="calc-price-form">
+            <input class="form-input" type="text" id="name" name="name" placeholder="Имя"/>
+            <select class="form-input" name="concrete-mark">
+              <option value="100">Бетон марки 100</option>
+              <option value="150">Бетон марки 150</option>
+              <option value="200">Бетон марки 200</option>
+              <option value="250">Бетон марки 250</option>
+            </select>
+            <select class="form-input" name="concrete-mark">
+              <option value="100">Бетон марки 100</option>
+              <option value="150">Бетон марки 150</option>
+              <option value="200">Бетон марки 200</option>
+              <option value="250">Бетон марки 250</option>
+            </select>
+            <input class="form-input" type="text" id="tel" name="tel" placeholder="Номер телефона"/>
+            <input class="form-input" type="text" id="kol-vo" name="kol-vo" placeholder="Количество кубов"/>
+            <input class="form-input form-submit" type="submit"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /Рассчитать стоимость бетона-->
+    <!-- Наш ассортимент-->
+    <div class="cell"><a name="about-comp"></a>
+      <!--якорь-->
+      <div class="our-range" name="about-comp">
+        <div class="our-range__title">
+          <h1>Наш ассортимент</h1>
+        </div>
+        <div class="our-range-items">
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - ячейка-->
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__btn">ЗАКАЗАТЬ</div>
+          </div>
+          <!-- Наш ассортимент - три пустых вспомогательных элемента	-->
+          <div class="our-range-item__empty"></div>
+          <div class="our-range-item__empty"></div>
+          <div class="our-range-item__empty"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Модальное окно - Ассортимент-->
+    <div class="modal">
+      <div class="modal__bg"></div>
+      <div class="modal-box">
+        <div class="modal-box__title"></div>
+        <div class="modal-box-form">
+          <div class="modal-box-form__name"></div>
+          <div class="modal-box-form__phone"></div>
+          <div class="modal-box-form__submit"></div>
+          <div class="modal-box-form__cubes"></div>
+          <div class="modal-box-form__mark"></div>
+        </div>
+        <div class="modal-box__note"></div>
+      </div>
+    </div>
+    <!-- /Модальное окно - Ассортимент-->
+    <!-- /Наш ассортимент-->
+    <!-- Почему выбирают нас-->
+    <div class="cell">
+      <div class="cell-why-us">
+        <div class="why-us">
+          <div class="why-us__title"> 
+            <h1>Почему выбирают нас</h1>
+          </div>
+          <div class="why-us-items">
+            <!-- Почему выбирают нас - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/why-us__trucks.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <p>Гарантируем соблюдение сроков.<br/>Доставляем продукцию на собственной спецтехнике<br/>Миксеры объемом 7м3</p>
+              </div>
+            </div>
+            <!-- Почему выбирают нас - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/why-us__machine.png'); background-position: center; background-repeat: no-repeat;"/>
+              <p>Мы являемся производителем и предлагаем наиболее выгодные условия сотрудничества</p>
+            </div>
+            <!-- Почему выбирают нас - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/why-us__scale.png'); background-position: center; background-repeat: no-repeat;"/>
+              <p>Качество продукции соответствует ГОСТу.<br/>Мы используем итальянское высококачественное оборудование</p>
+            </div>
+            <!-- Почему выбирают нас - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/why-us__money.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <p>Мы отгружаем ровно столько бетона, сколько вы заказали.<br/>Доставка бетона по: Ляховичи, Барановичи, Несвиж, Клецк и их районам</p>
+              </div>
+            </div>
+            <!-- Почему выбирают нас - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/why-us__discount.png'); background-position: center; background-repeat: no-repeat;"/>
+              <p>Низкие цены и гибкие условия оплаты.</p>
+            </div>
+            <!-- Почему выбирают нас - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/why-us__medal.png'); background-position: center; background-repeat: no-repeat;"/>
+              <p>Система скидок</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Почему выбирают нас-->
+    <!-- Как мы работаем-->
+    <div class="cell">
+      <div class="we-work">
+        <div class="we-work__title">
+          <h1>Как мы работаем</h1>
+        </div>
+        <div class="we-work-items">
+          <!-- Как мы работаем - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/we-work__call.png"/>
+            <div class="we-work-item__title">Заявка на звонок</div>
+          </div>
+          <!-- Как мы работаем - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/we-work__calc.png"/>
+            <div class="we-work-item__title">Расчет стоимости</div>
+          </div>
+          <!-- Как мы работаем - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/we-work__proizvodstvo.png"/>
+            <div class="we-work-item__title">Производство</div>
+          </div>
+          <!-- Как мы работаем - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/we-work__delivery.png"/>
+            <div class="we-work-item__title">Доставка в срок</div>
+          </div>
+          <!-- Как мы работаем - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/we-work__pleasure.png"/>
+            <div class="we-work-item__title">Вы довольны результатом						</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Как мы работаем-->
+    <!-- Отправьте заявку-->
+    <div class="cell">
+      <div class="cell-send-app">
+        <div class="send-app">
+          <!-- Заголовок-->
+          <div class="send-app__title1">Не нашли нужную информацию?</div>
+          <div class="send-app__title2">Отправьте заявку и мы вышлем Вам полный прайс-лист</div>
+          <!-- Форма отправки заявки-->
+          <form class="send-app-form">
+            <input class="form-input" type="text" name="price-name" placeholder="Имя"/>
+            <input class="form-input" type="text" name="price-tel" placeholder="Номер телефона"/>
+            <input class="form-input" type="text" name="price-mail" placeholder="Электронная почта"/>
+            <input class="form-input form-submit" type="submit"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- /Отправьте заявку-->
+    <!-- Наши гарантии-->
+    <div class="cell">
+      <div class="our-guarant-s">
+        <div class="we-work__title">
+          <h1>Наши гарантии</h1>
+        </div>
+        <div class="we-work-items">
+          <!-- Наши гарантии - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/our-guarant-s__quality.png"/>
+            <div class="we-work-item__title">Производство импортное, полностью сертифицировано и автоматизировано</div>
+          </div>
+          <!-- Наши гарантии - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/our-guarant-s__deadlines.png"/>
+            <div class="we-work-item__title">Если мы сорвем сроки доставки, то вернем вам  0,1 % от стоимости заказа</div>
+          </div>
+          <!-- Наши гарантии - ячейка-->
+          <div class="we-work-item"><img class="we-work-item__img" src="images/our-guarant-s__low-price.png"/>
+            <div class="we-work-item__title">Если вы найдете стоимость дешевле, чем у нас - вернем вам разницу в цене</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /Наши гарантии-->
+    <!-- Компания и услуги-->
+    <div class="cell cell-company"><img class="company__img-left" src="images/company__img-left.png"/><img class="company__img-right" src="images/company__img-right.png"/>
+      <div class="company">
+        <div class="company__title"> 
+          <h1>Компания и услуги</h1>
+        </div>
+        <div class="company__text"> 
+          <h3>Продажа и доставка бетона</h3>
+          <p>Компания «БетонКАМстрой» известна на белорусском рынке с 2011 как надежный поставщик высококачественного бетона. Доставляем бетон на стройплощадки Ляховичей, Барановичей, Несвижа, Клецка и их районов</p>
+          <p>Оформить заявку на поставки бетона и раствора можно с 8:00 до 22:00 по телефону и электронной почте. Купить бетон в «БетонКАМстрой» могут как организации, так и физические лица. </p>
+          <h3>Доставка бетона</h3>
+          <p>Качественный бетон нуждается в правильном хранении и особых условиях транспортировки. Сотрудники «БетонКАМстрой» перевозят бетон в специально оборудованных машинах. Такой способ транспортировки позволяет сохранить однородность и подвижность смесей, избежать несвоевременного затвердевания. Благодаря этому продукция сохраняет свои изначальные свойства и характеристики. Гарантируем своевременную доставку бетона. Продажа бетона и доставка осуществляются оперативно, качественно. </p>
+          <h3>Стоимость и сроки предоставления услуг</h3>
+          <p>Мы заинтересованы в длительном и плодотворном сотрудничестве с нашими заказчиками. Наши клиенты, однажды заказав услугу, остаются довольны и обращаются снова. Вы тоже можете стать нашим постоянным клиентом. Цена бетона, доставки вас порадует. Гибкая ценовая политика, качество услуг и своевременность выполнения заявок - важнейшие приоритеты компании. </p><br/>
+          <h3>Есть проблема? Звоните, и мы поможем ее решить.</h3>
+        </div>
+      </div>
+    </div>
+    <!-- /Компания и услуги-->
+    <!-- Компания и услуги - II(ячейки - из "Почему выбирают нас - ячейка")-->
+    <div class="cell">
+      <div class="company-ii">
+        <div class="why-us__title">
+          <h1>Компания и услуги</h1>
+        </div>
+        <div class="why-us__description">99% наших клиентов остаются довольны качеством товара и качеством услуг</div>
+        <div class="why-us-items">
+          <!-- Компания и услуги - II - ячейка-->
+          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+            <div class="why-us-item__text">
+              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+            </div>
+          </div>
+          <!-- Компания и услуги - II - ячейка-->
+          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+            <div class="why-us-item__text">
+              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+            </div>
+          </div>
+          <!-- Компания и услуги - II - ячейка-->
+          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+            <div class="why-us-item__text">
+              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+            </div>
+          </div>
+          <!-- Компания и услуги - II - ячейка-->
+          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+            <div class="why-us-item__text">
+              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+            </div>
+          </div>
+          <!-- Компания и услуги - II - ячейка-->
+          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+            <div class="why-us-item__text">
+              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+            </div>
+          </div>
+          <!-- Компания и услуги - II - ячейка-->
+          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+            <div class="why-us-item__text">
+              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cell">
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84735db6315fd17908a7473944874eec13c4ab723519726c47260b0342ff76e2&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="100%" height="340" frameborder="0"></iframe></div>
+    </div>
+    <!-- /Карта-->
+    <!-- Подвал-->
+    <footer>
+      <div class="footer"><img class="footer__logo" src="images/footer__logo.png"/>
+        <div class="footer__phone-mail">
+          <div class="footer__mail"><i class="fa fa-envelope" aria-hidden="true"></i>beton@mail.ru</div>
+          <div class="footer__phones">
+            <div class="footer__phones-phone"><i class="fa fa-phone" aria-hidden="true"> </i>+37533<span class="footer__phones-phone_yellow">318-96-32</span></div>
+          </div>
+        </div>
+        <div class="footer__call-back">Заказать звонок</div>
+        <!-- Модальное окно - Заказать звонок-->
+        <div class="modal">
+          <div class="modal__bg"></div>
+          <div class="modal-box">
+            <div class="modal-box__title"></div>
+            <div class="modal-box-form">
+              <div class="modal-box-form__name"></div>
+              <div class="modal-box-form__phone"></div>
+              <div class="modal-box-form__submit"></div>
+            </div>
+            <div class="modal-box__note"></div>
+          </div>
+        </div>
+        <!-- /Модальное окно - Заказать звонок-->
+      </div>
+    </footer>
+    <!-- /Подвал-->
+  </body>
+</html>
+<!-- плагин autoreload. по завершении разработки - удалить-->
+<script src="http://localhost:35729/livereload.js"></script>

@@ -1,0 +1,413 @@
+<!DOCTYPE HTML>
+html(lang="en")
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+		link(href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700" rel="stylesheet")
+		link(rel="stylesheet" href="normalize.css")
+		link(rel="stylesheet" href="style.css")
+		link(rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css")
+	body
+		// Шапка
+		header
+			.header
+				img.header__logo(src="images/header__logo.png")
+				ul.header-menu
+					li.header-menu__item
+						a(href="#about-comp").active О компании
+					li.header-menu__item.header-menu__item-dot
+					li.header-menu__item
+						a(href="#products") Продукция
+					li.header-menu__item.header-menu__item-dot
+					li.header-menu__item
+						a(href="#delivery") Доставка
+					li.header-menu__item.header-menu__item-dot
+					li.header-menu__item
+						a(href="#payment") Оплата
+					li.header-menu__item.header-menu__item-dot
+					li.header-menu__item
+						a(href="#contacts") Контакты						
+				.header__phones
+						.header__phones-phone +37533
+							span.header__phones-phone_yellow 318-96-32
+						a(href="#header-btn").header__phones-btn Заказать звонок
+				// Мобильное меню - кнопка 
+				input(type="checkbox" name="mobile-menu" id="mobile-menu_stroke-cross" style="display:none;")
+				.mobile-menu
+					label.mobile-menu__strokes(for="mobile-menu_stroke-cross")
+						.mobile-menu__stroke.mobile-menu__stroke-cross1
+						.mobile-menu__stroke.mobile-menu__stroke-cross2
+						.mobile-menu__stroke.mobile-menu__stroke-cross3
+				// Мобильное меню - Меню 
+				.mobile-menu__menu
+					ul.mobile-menu__item
+						li 
+							a(href="#").mobile-menu__item-a ПОТОЛКИ
+						li 
+							a(href="#").mobile-menu__item-a ПРОДУКЦИЯ
+						li 
+							a(href="#").mobile-menu__item-a ДОСТАВКА
+						li 
+							a(href="#").mobile-menu__item-a ОПЛАТА
+						li 
+							a(href="#").mobile-menu__item-a КОНТАКТЫ
+		// /Шапка
+		
+		// Слайдер
+		.cell
+			.slider
+				img.slider__img(src='images/slider-bg.png')
+				.slider-window
+					.slider-text
+						.slider-text__item1
+							span.slider-text__item1-span Товарный бетон и раствор						
+						.slider-text__item2
+							span.slider-text__item2-span Оптом и в розницу
+		// /Слайдер
+		
+		// Рассчитать стоимость бетона
+		.cell
+			.calc-price-bg
+				.calc-price
+					.calc-price__title Рассчитать стоимость бетона
+					form.calc-price-form
+						input(type="text" id="name" name="name" placeholder="Имя").form-input
+						select(name="concrete-mark").form-input
+							option(value="100") Бетон марки 100
+							option(value="150") Бетон марки 150
+							option(value="200") Бетон марки 200
+							option(value="250") Бетон марки 250
+						select(name="concrete-mark").form-input
+							option(value="100") Бетон марки 100
+							option(value="150") Бетон марки 150
+							option(value="200") Бетон марки 200
+							option(value="250") Бетон марки 250
+						input(type="text" id="tel" name="tel" placeholder="Номер телефона").form-input
+						input(type="text" id="kol-vo" name="kol-vo" placeholder="Количество кубов").form-input
+						input(type="submit").form-input.form-submit
+		// /Рассчитать стоимость бетона
+		
+		// Наш ассортимент
+		.cell
+			a(name="about-comp")
+			//якорь
+			.our-range(name="about-comp")
+				.our-range__title
+					h1 Наш ассортимент
+				.our-range-items
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - ячейка
+					.our-range-item
+						.our-range-item__title Бетон М-100
+						.our-range-item__btn ЗАКАЗАТЬ
+					// Наш ассортимент - три пустых вспомогательных элемента	
+					.our-range-item__empty
+					.our-range-item__empty
+					.our-range-item__empty
+							
+		// Модальное окно - Ассортимент
+		.modal
+			.modal__bg
+			.modal-box
+				.modal-box__title
+				.modal-box-form
+					.modal-box-form__name
+					.modal-box-form__phone
+					.modal-box-form__submit
+					.modal-box-form__cubes
+					.modal-box-form__mark
+				.modal-box__note
+		// /Модальное окно - Ассортимент
+		
+		// /Наш ассортимент
+		
+		// Почему выбирают нас
+		.cell
+			.cell-why-us
+				.why-us
+					.why-us__title 
+						h1 Почему выбирают нас
+					.why-us-items
+						// Почему выбирают нас - ячейка
+						.why-us-item
+							img(style="background-image: url('images/why-us__trucks.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								p Гарантируем соблюдение сроков.
+									br
+									| Доставляем продукцию на собственной спецтехнике
+									br
+									| Миксеры объемом 7м3
+								
+						// Почему выбирают нас - ячейка
+						.why-us-item
+							img(style="background-image: url('images/why-us__machine.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							p Мы являемся производителем и предлагаем наиболее выгодные условия сотрудничества
+								
+						// Почему выбирают нас - ячейка
+						.why-us-item
+							img(style="background-image: url('images/why-us__scale.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							p Качество продукции соответствует ГОСТу.
+								br
+								| Мы используем итальянское высококачественное оборудование
+								
+						// Почему выбирают нас - ячейка
+						.why-us-item
+							img(style="background-image: url('images/why-us__money.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								p Мы отгружаем ровно столько бетона, сколько вы заказали.
+									br
+									| Доставка бетона по: Ляховичи, Барановичи, Несвиж, Клецк и их районам
+								
+						// Почему выбирают нас - ячейка
+						.why-us-item
+							img(style="background-image: url('images/why-us__discount.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							p Низкие цены и гибкие условия оплаты.
+								
+						// Почему выбирают нас - ячейка
+						.why-us-item
+							img(style="background-image: url('images/why-us__medal.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							p Система скидок
+								
+		// /Почему выбирают нас
+		
+		// Как мы работаем
+		.cell
+			.we-work
+				.we-work__title
+					h1 Как мы работаем
+				.we-work-items
+					// Как мы работаем - ячейка
+					.we-work-item
+						img(src="images/we-work__call.png").we-work-item__img
+						.we-work-item__title Заявка на звонок
+						
+					// Как мы работаем - ячейка
+					.we-work-item
+						img(src="images/we-work__calc.png").we-work-item__img
+						.we-work-item__title Расчет стоимости
+						
+					// Как мы работаем - ячейка
+					.we-work-item
+						img(src="images/we-work__proizvodstvo.png").we-work-item__img
+						.we-work-item__title Производство
+						
+					// Как мы работаем - ячейка
+					.we-work-item
+						img(src="images/we-work__delivery.png").we-work-item__img
+						.we-work-item__title Доставка в срок
+						
+					// Как мы работаем - ячейка
+					.we-work-item
+						img(src="images/we-work__pleasure.png").we-work-item__img
+						.we-work-item__title Вы довольны результатом						
+						
+		// /Как мы работаем
+		
+		// Отправьте заявку
+		.cell
+			.cell-send-app
+				.send-app
+					// Заголовок
+					.send-app__title1 Не нашли нужную информацию?
+					.send-app__title2 Отправьте заявку и мы вышлем Вам полный прайс-лист
+					// Форма отправки заявки
+					form.send-app-form
+						input(type='text' name='price-name' placeholder='Имя').form-input
+						input(type='text' name='price-tel' placeholder='Номер телефона').form-input
+						input(type='text' name='price-mail' placeholder='Электронная почта').form-input
+						input(type='submit').form-input.form-submit
+		// /Отправьте заявку
+		
+		// Наши гарантии
+		.cell
+			.our-guarant-s
+				.we-work__title
+					h1 Наши гарантии
+				.we-work-items
+					// Наши гарантии - ячейка
+					.we-work-item
+						img(src="images/our-guarant-s__quality.png").we-work-item__img
+						.we-work-item__title Производство импортное, полностью сертифицировано и автоматизировано
+			
+					// Наши гарантии - ячейка
+					.we-work-item
+						img(src="images/our-guarant-s__deadlines.png").we-work-item__img
+						.we-work-item__title Если мы сорвем сроки доставки, то вернем вам  0,1 % от стоимости заказа
+			
+					// Наши гарантии - ячейка
+					.we-work-item
+						img(src="images/our-guarant-s__low-price.png").we-work-item__img
+						.we-work-item__title Если вы найдете стоимость дешевле, чем у нас - вернем вам разницу в цене
+		// /Наши гарантии
+		
+		// Компания и услуги
+		.cell.cell-company
+			img(src='images/company__img-left.png').company__img-left
+			img(src='images/company__img-right.png').company__img-right
+			.company
+				.company__title 
+					h1 Компания и услуги
+				.company__text 
+					h3 Продажа и доставка бетона
+					p Компания «БетонКАМстрой» известна на белорусском рынке с 2011 как надежный поставщик высококачественного бетона. Доставляем бетон на стройплощадки Ляховичей, Барановичей, Несвижа, Клецка и их районов
+					p Оформить заявку на поставки бетона и раствора можно с 8:00 до 22:00 по телефону и электронной почте. Купить бетон в «БетонКАМстрой» могут как организации, так и физические лица. 
+					h3 Доставка бетона
+					p Качественный бетон нуждается в правильном хранении и особых условиях транспортировки. Сотрудники «БетонКАМстрой» перевозят бетон в специально оборудованных машинах. Такой способ транспортировки позволяет сохранить однородность и подвижность смесей, избежать несвоевременного затвердевания. Благодаря этому продукция сохраняет свои изначальные свойства и характеристики. Гарантируем своевременную доставку бетона. Продажа бетона и доставка осуществляются оперативно, качественно. 
+					h3 Стоимость и сроки предоставления услуг
+					p Мы заинтересованы в длительном и плодотворном сотрудничестве с нашими заказчиками. Наши клиенты, однажды заказав услугу, остаются довольны и обращаются снова. Вы тоже можете стать нашим постоянным клиентом. Цена бетона, доставки вас порадует. Гибкая ценовая политика, качество услуг и своевременность выполнения заявок - важнейшие приоритеты компании. 
+					br
+					h3 Есть проблема? Звоните, и мы поможем ее решить.
+		// /Компания и услуги
+		
+		// Компания и услуги - II(ячейки - из "Почему выбирают нас - ячейка")
+		.cell
+			.company-ii
+				.why-us__title
+					h1 Компания и услуги
+				.why-us__description 99% наших клиентов остаются довольны качеством товара и качеством услуг
+				.why-us-items
+					// Компания и услуги - II - ячейка
+					.why-us-item
+						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+						.why-us-item__text
+							.why-us-item__text-title
+								strong Иван Иванов
+							p 
+								i Гарантируем соблюдение сроков.
+								br
+								i Доставляем продукцию на собственной спецтехнике
+								
+					// Компания и услуги - II - ячейка
+					.why-us-item
+						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+						.why-us-item__text
+							.why-us-item__text-title
+								strong Иван Иванов
+							p 
+								i Гарантируем соблюдение сроков.
+								br
+								i Доставляем продукцию на собственной спецтехнике
+								
+					// Компания и услуги - II - ячейка
+					.why-us-item
+						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+						.why-us-item__text
+							.why-us-item__text-title
+								strong Иван Иванов
+							p 
+								i Гарантируем соблюдение сроков.
+								br
+								i Доставляем продукцию на собственной спецтехнике
+								
+					// Компания и услуги - II - ячейка
+					.why-us-item
+						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+						.why-us-item__text
+							.why-us-item__text-title
+								strong Иван Иванов
+							p 
+								i Гарантируем соблюдение сроков.
+								br
+								i Доставляем продукцию на собственной спецтехнике
+								
+					// Компания и услуги - II - ячейка
+					.why-us-item
+						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+						.why-us-item__text
+							.why-us-item__text-title
+								strong Иван Иванов
+							p 
+								i Гарантируем соблюдение сроков.
+								br
+								i Доставляем продукцию на собственной спецтехнике
+								
+					// Компания и услуги - II - ячейка
+					.why-us-item
+						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+						.why-us-item__text
+							.why-us-item__text-title
+								strong Иван Иванов
+							p 
+								i Гарантируем соблюдение сроков.
+								br
+								i Доставляем продукцию на собственной спецтехнике
+									
+		.cell
+			.map
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84735db6315fd17908a7473944874eec13c4ab723519726c47260b0342ff76e2&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="100%" height="340" frameborder="0"></iframe>
+		// /Карта
+		
+		// Подвал
+		footer
+			.footer
+				img.footer__logo(src='images/footer__logo.png')
+					
+				.footer__phone-mail
+					.footer__mail
+						i(class="fa fa-envelope" aria-hidden="true")
+						| beton@mail.ru
+						
+					.footer__phones
+						.footer__phones-phone
+							i.fa.fa-phone(aria-hidden="true") 
+							| +37533
+							span.footer__phones-phone_yellow 318-96-32
+				.footer__call-back Заказать звонок
+				
+				// Модальное окно - Заказать звонок
+				.modal
+					.modal__bg
+					.modal-box
+						.modal-box__title
+						.modal-box-form
+							.modal-box-form__name
+							.modal-box-form__phone
+							.modal-box-form__submit
+						.modal-box__note
+				// /Модальное окно - Заказать звонок
+		// /Подвал
+// плагин autoreload. по завершении разработки - удалить
+script(src="http://localhost:35729/livereload.js")
