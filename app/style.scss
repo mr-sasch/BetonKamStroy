@@ -24,11 +24,37 @@ html {
 .mod_stand-pad {
 	@include stand-pad;
 }
+.mod_anchor-padd {
+	top: -90px;
+	position: absolute;
+}
+.mod_posr	{
+	position: relative;
+}
+// responsive
+	// отступы якорей от меню
+@media screen and (max-width: 980px) {
+	.mod_anchor-padd {
+		top: -169px;
+	}
+}
+@media screen and (max-width: 520px) {
+	.mod_anchor-padd {
+		top: -130px;
+	}
+}
+@media screen and (max-width: 360px) {
+}
+
 /* /Модификаторы */
 
 /* Шапка */
 header {
 	background-color: #000;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	z-index: 10;
 }
 .header {
 	position: relative;
@@ -61,7 +87,9 @@ header {
 	color: $white;
 	transition: .2s ease;
 }
-.header-menu__item a:hover,
+.header-menu__item a:hover {
+	color: $yellow;
+}
 .header-menu__item a.active {
 	color: $yellow;
 	text-decoration: underline;
@@ -101,6 +129,7 @@ header {
 	cursor: pointer;
 	align-items: center;
 	padding: 3px 0;
+	opacity: 1;
 }
 .mobile-menu__stroke {
 	position: relative;
@@ -111,14 +140,15 @@ header {
 }
 #mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross1 {
   transform: rotate(45deg);
-  top: 8px;
+  top: 9px;
 }
 #mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross2 {
   transform: rotate(-45deg);
-	top: -6px;
+	top: 0px;
 }
 #mobile-menu_stroke-cross:checked ~ .mobile-menu .mobile-menu__strokes .mobile-menu__stroke-cross3 {
-  display: none;
+  // display: none;
+	opacity: 0;
 }
 	//меню
 .mobile-menu__menu {
@@ -178,6 +208,10 @@ header {
 }
 a.header__phones-btn {
 	color: $white;
+	transition: .2s ease;
+}
+a.header__phones-btn:hover {
+	color: $yellow;
 }
 
 // Шапка-responsive
@@ -211,9 +245,12 @@ a.header__phones-btn {
 /* /Шапка */
 
 /* Слайдер */
+.slider-cell {
+	margin-top: 74px;
+}
 .slider {
 	position: relative;
-	height: 600px;
+	height: 500px;
 	overflow: hidden;
 }
 .slider__img {
@@ -274,6 +311,22 @@ a.header__phones-btn {
 		height: 400px;
 	}
 }
+	// компенсируем изменение ширины фиксированного меню
+	@media screen and (max-width: 980px) {
+		.slider-cell {
+			margin-top: 159px;
+		}
+}
+	@media screen and (max-width: 520px) {
+		.slider-cell {
+			margin-top: 113px;
+		}
+}
+	@media screen and (max-width: 330px) {
+		.slider-cell {
+			margin-top: 100px;
+		}
+}
 
 /* /Слайдер */
 
@@ -320,13 +373,18 @@ a.header__phones-btn {
 	padding-left: 20px;
 	margin: 5px 0;
 	background-color: $white;
-	color: #79758A;
+	color: $grey;
 }
 .form-input.form-submit {
 	padding: 0;
 	background-color: #000;
 	color: $yellow;
 	text-transform: uppercase;
+	cursor: pointer;
+	transition: .2s ease;
+}
+.form-input.form-submit:hover {
+	box-shadow: 0px 0px 7px #888888;
 }
 
 // responsive
@@ -345,8 +403,12 @@ a.header__phones-btn {
 
 
 /* Наш ассортимент */
+.our-range {
+    margin-top: 80px;
+}
 .our-range__title {
   text-align: center;
+	text-transform: uppercase;
 }
 .our-range-items {
 	max-width: $site-width-standart;
@@ -361,6 +423,10 @@ a.header__phones-btn {
 	border-radius: 10px;
 	background-image: url('images/range__bg.png');
 	margin: 15px 5px;
+	transition: .2s ease;
+}
+.our-range-item:hover {
+	box-shadow: 0px 0px 5px #888888;
 }
 .our-range-item__title {
 	display: -webkit-flex;
@@ -382,12 +448,31 @@ a.header__phones-btn {
 	bottom: 30px;
 	left: 50%;
 	transform: translateX(-50%);
+	cursor: pointer;
+	transition: .2s ease;
+}
+.our-range-item__btn:hover {
+	box-shadow: 0px 0px 7px #888888;
 }
 .our-range-item__empty {
 	position: relative;
 	display: inline-block;
 	width: 255px;
 }
+
+	// Модальное окно - Наш ассортимент
+.modal-box_assort {
+    max-height: 580px !important;
+		max-width: 530px !important;
+}
+.modal__bg {
+	background-color: rgba(0, 0, 0, 0.27);
+	position: fixed;
+	top: 0; bottom: 0; left: 0; right: 0;
+
+}
+
+// /Модальное окно - Наш ассортимент
 
 // responsive
 @media screen and (max-width: 1110px) {
@@ -399,12 +484,10 @@ a.header__phones-btn {
 
 
 /* Почему выбирают нас */
-.cell-why-us {
-
-}
 .why-us {
 	background-image: url('images/why-us__bg.png');
 	padding: 40px 20px;
+	margin-top: 80px;
 }
 .why-us__title {
 	text-align: center;
@@ -426,6 +509,9 @@ a.header__phones-btn {
 	min-width: 320px;
 	padding: 0 10px;
 	padding-bottom: 40px;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
 }
 .why-us-item p {
 	margin: 0;
@@ -437,6 +523,7 @@ a.header__phones-btn {
 	border-radius: 50%;
 	float: left;
 	margin-right: 20px;
+	flex-shrink: 0;
 }
 // responsive
 @media screen and (max-width: 1000px) {
@@ -449,6 +536,8 @@ a.header__phones-btn {
 		text-align: center;
 		width: 100%;
 		min-width: inherit;
+		flex-direction: column;
+		align-items: center;
 	}
 	.why-us-item__img {
 		float: none;
@@ -465,10 +554,12 @@ a.header__phones-btn {
 	@include stand-pad;
 	max-width: calc(#{$site-width-standart} + 20px);
 	margin: auto;
+	margin-top: 80px;
 }
 .we-work__title {
 	text-transform: uppercase;
 	text-align: center;
+	margin-bottom: 40px;
 }
 .we-work-items {
 	display: -webkit-flex;
@@ -506,6 +597,7 @@ a.header__phones-btn {
 .cell-send-app {
 	background-color: $yellow;
 	padding: 40px 10px 50px;
+	margin-top: 30px;
 }
 .send-app {
 	max-width: 950px;
@@ -539,7 +631,7 @@ a.header__phones-btn {
 
 /* Наши гарантии */
 .our-guarant-s {
-	padding: 50px 0;
+	padding: 80px 0;
 }
 .our-guarant-s .we-work__title {
 	margin-bottom: 50px;
@@ -561,6 +653,10 @@ a.header__phones-btn {
 	padding: 50px 10px;
 	position: relative;
 	width: 100%;
+}
+.company__title {
+	margin-bottom: 50px;
+	text-transform: uppercase;
 }
 .company {
 	position: relative;
@@ -608,10 +704,78 @@ a.header__phones-btn {
 /* /Компания и услуги - II */
 
 /* Карта */
-
 // responsive
-
 /* /Карта */
+
+// Модальные окна
+
+	// Заказать звонок
+.modal-box {
+	position: fixed;
+	background-color: $white;
+	border: 10px solid $blue;
+	border-radius: 5px;
+	padding: 40px 10px 60px;
+	max-width: 540px;
+	max-height: 427px;
+	color: #000;
+	@include stand-mar;
+	z-index: 10;
+}
+.modal-box__title {
+	margin-bottom: 50px;
+}
+.modal-box__title-text {
+	font-size: 30px;
+	font-weight: 300;
+	text-align: center;
+}
+.modal-box__title-underline {
+	border: 1px solid $blue;
+	height: 0;
+	margin: 2px 3px;
+	margin-bottom: 0;
+}
+.modal-box-form {
+	max-width: 350px;
+	margin: auto;
+}
+.modal-box-form__input {
+	display: inline-block;
+	width: 100%;
+	border-radius: 5px;
+	border: 1px solid #bababa;
+	padding: 9px 0;
+	padding-left: 18px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+}
+.modal-box-form__submit {
+	width: 100%;
+	border: none;
+	background-color: $yellow;
+	text-transform: uppercase;
+	font-size: 16px;
+	font-weight: 600;
+	padding: 10px 0;
+	border-radius: 5px;
+	margin: 15px 0;
+	cursor: pointer;
+}
+.modal-box__note {
+	font-size: 12px;
+	font-weight: 300;
+	margin-top: 25px;
+
+}
+
+	// /Заказать звонок
+
+	//
+
+	// /
+
+// /Модальные окна
 
 
 /* Подвал */
@@ -668,6 +832,24 @@ footer {
 	margin-right: 5px;
 }
 
+// Кнопка "Вверх"
+.to-top {
+    position: fixed;
+    bottom: 30px; right: 20px;
+    background-color: #000;
+    text-align: center;
+    width: 42px;
+		border: 2px solid $yellow;
+		border-radius: 8px;
+}
+.to-top__arrow {
+    padding: 10px 0;
+    color: $yellow;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+		margin: 0 !important;
+}
+// /Кнопка "Вверх"
 
 // responsive
 @media screen and (max-width: 850px) {

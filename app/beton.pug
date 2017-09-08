@@ -7,17 +7,26 @@ html(lang="en")
 		link(rel="stylesheet" href="normalize.css")
 		link(rel="stylesheet" href="style.css")
 		link(rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css")
+		
+		// Bootstrap
+		link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous")
+		script(src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous")
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous")
+		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous")
+		// /Bootstrap
+			
 	body
 		// Шапка
 		header
 			.header
-				img.header__logo(src="images/header__logo.png")
-				ul.header-menu
+				a.header__logo-a(href="./beton.html")
+					img.header__logo(src="images/header__logo.png")
+				ul.header-menu#menu
 					li.header-menu__item
 						a(href="#about-comp").active О компании
 					li.header-menu__item.header-menu__item-dot
 					li.header-menu__item
-						a(href="#products") Продукция
+						a(href="#why-us") Продукция
 					li.header-menu__item.header-menu__item-dot
 					li.header-menu__item
 						a(href="#delivery") Доставка
@@ -40,21 +49,21 @@ html(lang="en")
 						.mobile-menu__stroke.mobile-menu__stroke-cross3
 				// Мобильное меню - Меню 
 				.mobile-menu__menu
-					ul.mobile-menu__item
+					ul.mobile-menu__item#mobile-menu
 						li 
-							a(href="#").mobile-menu__item-a ПОТОЛКИ
+							a(href="#about-comp").mobile-menu__item-a ПОТОЛКИ
+						li
+							a(href="#why-us").mobile-menu__item-a ПРОДУКЦИЯ
+						li
+							a(href="#delivery").mobile-menu__item-a ДОСТАВКА
 						li 
-							a(href="#").mobile-menu__item-a ПРОДУКЦИЯ
+							a(href="#payment").mobile-menu__item-a ОПЛАТА
 						li 
-							a(href="#").mobile-menu__item-a ДОСТАВКА
-						li 
-							a(href="#").mobile-menu__item-a ОПЛАТА
-						li 
-							a(href="#").mobile-menu__item-a КОНТАКТЫ
+							a(href="#contacts").mobile-menu__item-a КОНТАКТЫ
 		// /Шапка
 		
 		// Слайдер
-		.cell
+		.cell.slider-cell
 			.slider
 				img.slider__img(src='images/slider-bg.png')
 				.slider-window
@@ -89,77 +98,82 @@ html(lang="en")
 		
 		// Наш ассортимент
 		.cell
-			a(name="about-comp")
-			//якорь
-			.our-range(name="about-comp")
-				.our-range__title
+			.our-range
+				.our-range__title.mod_posr
+					#about-comp.mod_anchor-padd
 					h1 Наш ассортимент
 				.our-range-items
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
+						
 					// Наш ассортимент - ячейка
 					.our-range-item
 						.our-range-item__title Бетон М-100
-						.our-range-item__btn ЗАКАЗАТЬ
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
+						
 					// Наш ассортимент - три пустых вспомогательных элемента	
-					.our-range-item__empty
-					.our-range-item__empty
-					.our-range-item__empty
+					.our-range-item__empty(style="width:265px")
+					.our-range-item__empty(style="width:265px")
+					.our-range-item__empty(style="width:265px")
 							
 		// Модальное окно - Ассортимент
-		.modal
-			.modal__bg
-			.modal-box
-				.modal-box__title
-				.modal-box-form
-					.modal-box-form__name
-					.modal-box-form__phone
-					.modal-box-form__submit
-					.modal-box-form__cubes
-					.modal-box-form__mark
-				.modal-box__note
+		
+		.modal.fade#modal-box_assort(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+			.modal-box.modal-box_assort.modal-dialog
+				form.modal-box-form
+					.modal-box__title
+						.modal-box__title-text Заказать продукт
+						.modal-box__title-underline
+					input.modal-box-form__input(type="text" name="assort__name" placeholder="Имя")#assort__name
+					input.modal-box-form__input(type="text" name="assort__tel" placeholder="Номер телефона")#assort__tel
+					input.modal-box-form__input(type="text" name="assort__cubes" placeholder="Количество кубов")#assort__name
+					input.modal-box-form__input(type="text" name="assort__mark" placeholder="Марка бетона")#assort__mark
+					
+					input.modal-box-form__submit(type="submit" value="Оформить заказ")
+					.modal-box__note *Ваши персональные данные в безопасности
+
 		// /Модальное окно - Ассортимент
 		
 		// /Наш ассортимент
@@ -168,7 +182,8 @@ html(lang="en")
 		.cell
 			.cell-why-us
 				.why-us
-					.why-us__title 
+					.why-us__title.mod_posr
+						#why-us.mod_anchor-padd
 						h1 Почему выбирают нас
 					.why-us-items
 						// Почему выбирают нас - ячейка
@@ -184,14 +199,16 @@ html(lang="en")
 						// Почему выбирают нас - ячейка
 						.why-us-item
 							img(style="background-image: url('images/why-us__machine.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-							p Мы являемся производителем и предлагаем наиболее выгодные условия сотрудничества
+							.why-us-item__text
+								p Мы являемся производителем и предлагаем наиболее выгодные условия сотрудничества
 								
 						// Почему выбирают нас - ячейка
 						.why-us-item
 							img(style="background-image: url('images/why-us__scale.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-							p Качество продукции соответствует ГОСТу.
-								br
-								| Мы используем итальянское высококачественное оборудование
+							.why-us-item__text
+								p Качество продукции соответствует ГОСТу.
+									br
+									| Мы используем итальянское высококачественное оборудование
 								
 						// Почему выбирают нас - ячейка
 						.why-us-item
@@ -204,19 +221,22 @@ html(lang="en")
 						// Почему выбирают нас - ячейка
 						.why-us-item
 							img(style="background-image: url('images/why-us__discount.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-							p Низкие цены и гибкие условия оплаты.
+							.why-us-item__text
+								p Низкие цены и гибкие условия оплаты.
 								
 						// Почему выбирают нас - ячейка
 						.why-us-item
 							img(style="background-image: url('images/why-us__medal.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-							p Система скидок
+							.why-us-item__text
+								p Система скидок
 								
 		// /Почему выбирают нас
 		
 		// Как мы работаем
 		.cell
 			.we-work
-				.we-work__title
+				.we-work__title.mod_posr
+					#delivery.mod_anchor-padd
 					h1 Как мы работаем
 				.we-work-items
 					// Как мы работаем - ячейка
@@ -264,7 +284,8 @@ html(lang="en")
 		// Наши гарантии
 		.cell
 			.our-guarant-s
-				.we-work__title
+				.we-work__title.mod_posr
+					#payment.mod_anchor-padd
 					h1 Наши гарантии
 				.we-work-items
 					// Наши гарантии - ячейка
@@ -288,7 +309,8 @@ html(lang="en")
 			img(src='images/company__img-left.png').company__img-left
 			img(src='images/company__img-right.png').company__img-right
 			.company
-				.company__title 
+				.company__title.mod_posr
+					#contacts.mod_anchor-padd
 					h1 Компания и услуги
 				.company__text 
 					h3 Продажа и доставка бетона
@@ -395,19 +417,39 @@ html(lang="en")
 							i.fa.fa-phone(aria-hidden="true") 
 							| +37533
 							span.footer__phones-phone_yellow 318-96-32
-				.footer__call-back Заказать звонок
+				.footer__call-back(data-toggle="modal" data-target="#modal-box_call-back") Заказать звонок
 				
 				// Модальное окно - Заказать звонок
-				.modal
-					.modal__bg
-					.modal-box
-						.modal-box__title
-						.modal-box-form
-							.modal-box-form__name
-							.modal-box-form__phone
-							.modal-box-form__submit
-						.modal-box__note
+				.modal.fade#modal-box_call-back(tabindex="-1" role="dialog" aria-labelledby="assort-btn" aria-hidden="true")
+					.modal-box.modal-dialog
+						form.modal-box-form
+							.modal-box__title
+								.modal-box__title-text Заказ обратного звонка
+								.modal-box__title-underline
+							input.modal-box-form__input(type="text" name="call-back__name" placeholder="Имя")#call-back__name
+							input.modal-box-form__input(type="text" name="call-back__tel" placeholder="Номер телефона")#call-back__tel
+							input.modal-box-form__submit(type="submit" value="Заказать звонок")
+							.modal-box__note *Ваши персональные данные в безопасности
 				// /Модальное окно - Заказать звонок
+				
+				// Кнопка "Вверх"
+				a(href="#" style="display: none;").to-top.mobile-hide
+					i(aria-hidden="true").to-top__arrow.fa.fa-angle-up
+				// /Кнопка "Вверх"
+				
+				// Подключение скриптов
+				
+				//jQuery
+				script(src="https://code.jquery.com/jquery-3.2.1.min.js"
+		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		crossorigin="anonymous")
+				// Плавный переход по якорям
+				script(src="scripts/smooth-transition.js")
+				// Переход к верху страницы
+				script(src="scripts/scroll-to-top.js")
+				
+				// /Подключение скриптов
+				
 		// /Подвал
 // плагин autoreload. по завершении разработки - удалить
 script(src="http://localhost:35729/livereload.js")
