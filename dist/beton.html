@@ -106,62 +106,61 @@
         <div class="our-range-items">
           <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
-            <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
+            <cart-title class="our-range-item__title">Бетон М-100</cart-title>
+            <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort" onclick="concreteMark()">ЗАКАЗАТЬ</div>
+            <script src="scripts/card-add-field.js"></script>
           </div>
           <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
-          <!-- Наш ассортимент - ячейка-->
           <div class="our-range-item">
-            <div class="our-range-item__title">Бетон М-100</div>
+            <div class="our-range-item__title">Бетон М-150</div>
+            <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
+          </div>
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-150</div>
+            <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
+          </div>
+          <div class="our-range-item">
+            <div class="our-range-item__title">Бетон М-150</div>
             <div class="our-range-item__btn" data-toggle="modal" data-target="#modal-box_assort">ЗАКАЗАТЬ</div>
           </div>
           <!-- Наш ассортимент - три пустых вспомогательных элемента	-->
@@ -182,11 +181,7 @@
           <input class="modal-box-form__input" type="text" name="assort__name" placeholder="Имя" id="assort__name"/>
           <input class="modal-box-form__input" type="text" name="assort__tel" placeholder="Номер телефона" id="assort__tel"/>
           <input class="modal-box-form__input" type="text" name="assort__cubes" placeholder="Количество кубов" id="assort__name"/>
-          <select class="modal-box-form__input" name="assort__mark-select" id="assort__mark"><option value="100">Бетон марки 100</option>
-<option value="150">Бетон марки 150</option>
-<option value="200">Бетон марки 200</option>
-<option value="250">Бетон марки 250</option>
-          </select>
+          <input class="modal-box-form__input" name="assort__mark-select" value="Бетон марки 150" id="assort__mark"/>
           <input class="modal-box-form__submit" type="submit" value="Оформить заказ"/>
           <div class="modal-box__note">*Ваши персональные данные в безопасности</div>
         </form>

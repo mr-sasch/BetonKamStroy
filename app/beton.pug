@@ -107,55 +107,21 @@ html(lang="en")
 					#about-comp.mod_anchor-padd
 					h1 Наш ассортимент
 				.our-range-items
+					
+					
 					// Наш ассортимент - ячейка
 					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
-					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
+						cart-title.our-range-item__title Бетон М-100
+						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort" onclick='concreteMark()') ЗАКАЗАТЬ
+						
+						script(src='scripts/card-add-field.js')
+						
 						
 					// Наш ассортимент - ячейка
-					.our-range-item
-						.our-range-item__title Бетон М-100
-						.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
+					- for(i=0;i<=12;i++)
+						.our-range-item
+							.our-range-item__title Бетон М-150
+							.our-range-item__btn(data-toggle="modal" data-target="#modal-box_assort") ЗАКАЗАТЬ
 						
 					// Наш ассортимент - три пустых вспомогательных элемента	
 					.our-range-item__empty(style="width:265px")
@@ -174,11 +140,7 @@ html(lang="en")
 					input.modal-box-form__input(type="text" name="assort__tel" placeholder="Номер телефона")#assort__tel
 					input.modal-box-form__input(type="text" name="assort__cubes" placeholder="Количество кубов")#assort__name
 					
-					select.modal-box-form__input(name='assort__mark-select')#assort__mark
-						<option value="100">Бетон марки 100</option>
-						<option value="150">Бетон марки 150</option>
-						<option value="200">Бетон марки 200</option>
-						<option value="250">Бетон марки 250</option>
+					input.modal-box-form__input(name='assort__mark-select' value='Бетон марки 150')#assort__mark
 					
 					input.modal-box-form__submit(type="submit" value="Оформить заказ")
 					.modal-box__note *Ваши персональные данные в безопасности
