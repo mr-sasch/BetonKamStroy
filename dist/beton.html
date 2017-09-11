@@ -13,6 +13,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
     <!-- /Bootstrap-->
+    <!-- Slick Slider-->
+    <link rel="stylesheet" type="text/css" href="scripts/slick/slick.css"/>
+    <!-- /Slick Slider-->
   </head>
   <body>
     <!-- Шапка-->
@@ -30,7 +33,7 @@
           <li class="header-menu__item"><a href="#contacts">Контакты						</a></li>
         </ul>
         <div class="header__phones">
-          <div class="header__phones-phone">+37533<span class="header__phones-phone_yellow">318-96-32</span></div><a class="header__phones-btn" href="#header-btn">Заказать звонок</a>
+          <div class="header__phones-phone">+37533<span class="header__phones-phone_yellow">318-96-32</span></div><a class="header__phones-btn" href="#header-btn" data-toggle="modal" data-target="#modal-box_call-back">Заказать звонок</a>
         </div>
         <!-- Мобильное меню - кнопка -->
         <input type="checkbox" name="mobile-menu" id="mobile-menu_stroke-cross" style="display:none;"/>
@@ -87,7 +90,7 @@
             </select>
             <input class="form-input" type="text" id="tel" name="tel" placeholder="Номер телефона"/>
             <input class="form-input" type="text" id="kol-vo" name="kol-vo" placeholder="Количество кубов"/>
-            <input class="form-input form-submit" type="submit"/>
+            <input class="form-input form-submit" type="submit" value="отправить"/>
           </form>
         </div>
       </div>
@@ -179,7 +182,11 @@
           <input class="modal-box-form__input" type="text" name="assort__name" placeholder="Имя" id="assort__name"/>
           <input class="modal-box-form__input" type="text" name="assort__tel" placeholder="Номер телефона" id="assort__tel"/>
           <input class="modal-box-form__input" type="text" name="assort__cubes" placeholder="Количество кубов" id="assort__name"/>
-          <input class="modal-box-form__input" type="text" name="assort__mark" placeholder="Марка бетона" id="assort__mark"/>
+          <select class="modal-box-form__input" name="assort__mark-select" id="assort__mark"><option value="100">Бетон марки 100</option>
+<option value="150">Бетон марки 150</option>
+<option value="200">Бетон марки 200</option>
+<option value="250">Бетон марки 250</option>
+          </select>
           <input class="modal-box-form__submit" type="submit" value="Оформить заказ"/>
           <div class="modal-box__note">*Ваши персональные данные в безопасности</div>
         </form>
@@ -281,7 +288,7 @@
             <input class="form-input" type="text" name="price-name" placeholder="Имя"/>
             <input class="form-input" type="text" name="price-tel" placeholder="Номер телефона"/>
             <input class="form-input" type="text" name="price-mail" placeholder="Электронная почта"/>
-            <input class="form-input form-submit" type="submit"/>
+            <input class="form-input form-submit" type="submit" value="отправить"/>
           </form>
         </div>
       </div>
@@ -338,56 +345,95 @@
           <h1>Компания и услуги</h1>
         </div>
         <div class="why-us__description">99% наших клиентов остаются довольны качеством товара и качеством услуг</div>
-        <div class="why-us-items">
-          <!-- Компания и услуги - II - ячейка-->
-          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
-            <div class="why-us-item__text">
-              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
-              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+        <div class="why-us-items why-us-slider">
+          <div class="why-us-items__col">
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
+            </div>
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
             </div>
           </div>
-          <!-- Компания и услуги - II - ячейка-->
-          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
-            <div class="why-us-item__text">
-              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
-              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+          <div class="why-us-items__col">
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
+            </div>
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
             </div>
           </div>
-          <!-- Компания и услуги - II - ячейка-->
-          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
-            <div class="why-us-item__text">
-              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
-              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+          <div class="why-us-items__col">
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
+            </div>
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
             </div>
           </div>
-          <!-- Компания и услуги - II - ячейка-->
-          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
-            <div class="why-us-item__text">
-              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
-              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+          <div class="why-us-items__col">
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
+            </div>
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
             </div>
           </div>
-          <!-- Компания и услуги - II - ячейка-->
-          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
-            <div class="why-us-item__text">
-              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
-              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+          <div class="why-us-items__col">
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
             </div>
-          </div>
-          <!-- Компания и услуги - II - ячейка-->
-          <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
-            <div class="why-us-item__text">
-              <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
-              <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+            <!-- Компания и услуги - II - ячейка-->
+            <div class="why-us-item"><img class="why-us-item__img" style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;"/>
+              <div class="why-us-item__text">
+                <div class="why-us-item__text-title"><strong>Иван Иванов</strong></div>
+                <p> <i>Гарантируем соблюдение сроков.</i><br/><i>Доставляем продукцию на собственной спецтехнике</i></p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!-- Карта							-->
     <div class="cell">
-      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84735db6315fd17908a7473944874eec13c4ab723519726c47260b0342ff76e2&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="100%" height="340" frameborder="0"></iframe></div>
+      <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84735db6315fd17908a7473944874eec13c4ab723519726c47260b0342ff76e2&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe></div>
     </div>
-    <!-- /Карта-->
+    <!-- /Карта		-->
     <!-- Подвал-->
     <footer>
       <div class="footer"><img class="footer__logo" src="images/footer__logo.png"/>
@@ -417,12 +463,16 @@
         <!-- Кнопка "Вверх"--><a class="to-top mobile-hide" href="#" style="display: none;"><i class="to-top__arrow fa fa-angle-up" aria-hidden="true"></i></a>
         <!-- /Кнопка "Вверх"-->
         <!-- Подключение скриптов-->
-        <!--jQuery-->
+        <!-- jQuery-->
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
         <!-- Плавный переход по якорям-->
         <script src="scripts/smooth-transition.js"></script>
         <!-- Переход к верху страницы-->
         <script src="scripts/scroll-to-top.js"></script>
+        <!-- Подключение Slick slider-->
+        <!-- Инициация Slick Slider-->
+        <script type="text/javascript" src="scripts/slick/slick.min.js"></script>
+        <script src="scripts/slick/slider-init.js"></script>
         <!-- /Подключение скриптов-->
       </div>
     </footer>

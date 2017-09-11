@@ -76,7 +76,9 @@ header {
 .header-menu__item a:hover {
   color: #ffea00; }
 
-.header-menu__item a.active {
+.header-menu__item a.active,
+.header-menu__item a:active,
+.header-menu__item a:focus {
   color: #ffea00;
   text-decoration: underline; }
 
@@ -178,6 +180,10 @@ header {
   text-decoration: none;
   color: #000; }
 
+.mobile-menu__item-a:active,
+.mobile-menu__item-a:focus {
+  color: #79758A; }
+
 .header__phones {
   text-align: right; }
 
@@ -191,8 +197,11 @@ a.header__phones-btn {
   color: #fff;
   transition: .2s ease; }
 
-a.header__phones-btn:hover {
-  color: #ffea00; }
+a.header__phones-btn:hover,
+a.header__phones-btn:active,
+a.header__phones-btn:visited,
+a.header__phones-btn:focus {
+  color: #ffea00 !important; }
 
 @media screen and (max-width: 980px) {
   .header {
@@ -217,7 +226,7 @@ a.header__phones-btn:hover {
 /* /Шапка */
 /* Слайдер */
 .slider-cell {
-  margin-top: 74px; }
+  margin-top: 70px; }
 
 .slider {
   position: relative;
@@ -325,7 +334,7 @@ a.header__phones-btn:hover {
   align-items: center; }
 
 .form-input {
-  min-width: 210px;
+  width: 210px;
   height: 37px;
   border: none;
   border-radius: 5px;
@@ -423,6 +432,10 @@ a.header__phones-btn:hover {
   left: 0;
   right: 0; }
 
+.modal-box-form__input {
+  background-color: #fff;
+  color: #79758A; }
+
 @media screen and (max-width: 1110px) {
   .our-range-items {
     text-align: center; } }
@@ -430,7 +443,7 @@ a.header__phones-btn:hover {
 /* Почему выбирают нас */
 .why-us {
   background-image: url("images/why-us__bg.png");
-  padding: 40px 20px;
+  padding: 35px 20px;
   margin-top: 80px; }
 
 .why-us__title {
@@ -469,10 +482,13 @@ a.header__phones-btn:hover {
   margin-right: 20px;
   flex-shrink: 0; }
 
+.why-us-items button {
+  display: none !important; }
+
 @media screen and (max-width: 1000px) {
   .why-us-items {
     justify-content: center; } }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 950px) {
   .why-us-item {
     text-align: center;
     width: 100%;
@@ -677,6 +693,11 @@ a.header__phones-btn:hover {
   font-weight: 300;
   margin-top: 25px; }
 
+/* Карта */
+.map {
+  margin-bottom: -10px; }
+
+/* /Карта */
 /* Подвал */
 footer {
   background-color: #000; }

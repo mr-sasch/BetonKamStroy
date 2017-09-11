@@ -14,6 +14,10 @@ html(lang="en")
 		script(src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous")
 		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous")
 		// /Bootstrap
+		
+		// Slick Slider
+		link(rel="stylesheet" type="text/css" href="scripts/slick/slick.css")
+		// /Slick Slider
 			
 	body
 		// Шапка
@@ -39,7 +43,7 @@ html(lang="en")
 				.header__phones
 						.header__phones-phone +37533
 							span.header__phones-phone_yellow 318-96-32
-						a(href="#header-btn").header__phones-btn Заказать звонок
+						a(href="#header-btn" data-toggle="modal" data-target="#modal-box_call-back").header__phones-btn Заказать звонок
 				// Мобильное меню - кнопка 
 				input(type="checkbox" name="mobile-menu" id="mobile-menu_stroke-cross" style="display:none;")
 				.mobile-menu
@@ -93,7 +97,7 @@ html(lang="en")
 							option(value="250") Бетон марки 250
 						input(type="text" id="tel" name="tel" placeholder="Номер телефона").form-input
 						input(type="text" id="kol-vo" name="kol-vo" placeholder="Количество кубов").form-input
-						input(type="submit").form-input.form-submit
+						input(type="submit" value='отправить').form-input.form-submit
 		// /Рассчитать стоимость бетона
 		
 		// Наш ассортимент
@@ -169,7 +173,12 @@ html(lang="en")
 					input.modal-box-form__input(type="text" name="assort__name" placeholder="Имя")#assort__name
 					input.modal-box-form__input(type="text" name="assort__tel" placeholder="Номер телефона")#assort__tel
 					input.modal-box-form__input(type="text" name="assort__cubes" placeholder="Количество кубов")#assort__name
-					input.modal-box-form__input(type="text" name="assort__mark" placeholder="Марка бетона")#assort__mark
+					
+					select.modal-box-form__input(name='assort__mark-select')#assort__mark
+						<option value="100">Бетон марки 100</option>
+						<option value="150">Бетон марки 150</option>
+						<option value="200">Бетон марки 200</option>
+						<option value="250">Бетон марки 250</option>
 					
 					input.modal-box-form__submit(type="submit" value="Оформить заказ")
 					.modal-box__note *Ваши персональные данные в безопасности
@@ -278,7 +287,7 @@ html(lang="en")
 						input(type='text' name='price-name' placeholder='Имя').form-input
 						input(type='text' name='price-tel' placeholder='Номер телефона').form-input
 						input(type='text' name='price-mail' placeholder='Электронная почта').form-input
-						input(type='submit').form-input.form-submit
+						input(type='submit' value='отправить').form-input.form-submit
 		// /Отправьте заявку
 		
 		// Наши гарантии
@@ -330,78 +339,128 @@ html(lang="en")
 				.why-us__title
 					h1 Компания и услуги
 				.why-us__description 99% наших клиентов остаются довольны качеством товара и качеством услуг
-				.why-us-items
-					// Компания и услуги - II - ячейка
-					.why-us-item
-						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-						.why-us-item__text
-							.why-us-item__text-title
-								strong Иван Иванов
-							p 
-								i Гарантируем соблюдение сроков.
-								br
-								i Доставляем продукцию на собственной спецтехнике
-								
-					// Компания и услуги - II - ячейка
-					.why-us-item
-						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-						.why-us-item__text
-							.why-us-item__text-title
-								strong Иван Иванов
-							p 
-								i Гарантируем соблюдение сроков.
-								br
-								i Доставляем продукцию на собственной спецтехнике
-								
-					// Компания и услуги - II - ячейка
-					.why-us-item
-						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-						.why-us-item__text
-							.why-us-item__text-title
-								strong Иван Иванов
-							p 
-								i Гарантируем соблюдение сроков.
-								br
-								i Доставляем продукцию на собственной спецтехнике
-								
-					// Компания и услуги - II - ячейка
-					.why-us-item
-						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-						.why-us-item__text
-							.why-us-item__text-title
-								strong Иван Иванов
-							p 
-								i Гарантируем соблюдение сроков.
-								br
-								i Доставляем продукцию на собственной спецтехнике
-								
-					// Компания и услуги - II - ячейка
-					.why-us-item
-						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-						.why-us-item__text
-							.why-us-item__text-title
-								strong Иван Иванов
-							p 
-								i Гарантируем соблюдение сроков.
-								br
-								i Доставляем продукцию на собственной спецтехнике
-								
-					// Компания и услуги - II - ячейка
-					.why-us-item
-						img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
-						.why-us-item__text
-							.why-us-item__text-title
-								strong Иван Иванов
-							p 
-								i Гарантируем соблюдение сроков.
-								br
-								i Доставляем продукцию на собственной спецтехнике
+				.why-us-items.why-us-slider
+					
+					.why-us-items__col
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+					
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+
+					.why-us-items__col
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
 									
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+					
+					.why-us-items__col
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+									
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+		
+					.why-us-items__col
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+									
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+		
+					.why-us-items__col
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+									
+						// Компания и услуги - II - ячейка
+						.why-us-item
+							img(style="background-image: url('images/company-ii__ivan.png'); background-position: center; background-repeat: no-repeat;").why-us-item__img
+							.why-us-item__text
+								.why-us-item__text-title
+									strong Иван Иванов
+								p 
+									i Гарантируем соблюдение сроков.
+									br
+									i Доставляем продукцию на собственной спецтехнике
+		
+		// Карта							
 		.cell
 			.map
-				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84735db6315fd17908a7473944874eec13c4ab723519726c47260b0342ff76e2&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="100%" height="340" frameborder="0"></iframe>
-		// /Карта
-		
+				<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A84735db6315fd17908a7473944874eec13c4ab723519726c47260b0342ff76e2&amp;lang=ru_RU&amp;scroll=true&amp;source=constructor" width="100%" height="350" frameborder="0"></iframe>
+		// /Карта		
 		// Подвал
 		footer
 			.footer
@@ -439,7 +498,7 @@ html(lang="en")
 				
 				// Подключение скриптов
 				
-				//jQuery
+				// jQuery
 				script(src="https://code.jquery.com/jquery-3.2.1.min.js"
 		integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
 		crossorigin="anonymous")
@@ -447,6 +506,12 @@ html(lang="en")
 				script(src="scripts/smooth-transition.js")
 				// Переход к верху страницы
 				script(src="scripts/scroll-to-top.js")
+				
+				// Подключение Slick slider
+
+				// Инициация Slick Slider
+				script(type="text/javascript" src="scripts/slick/slick.min.js")
+				script(src='scripts/slick/slider-init.js')
 				
 				// /Подключение скриптов
 				
